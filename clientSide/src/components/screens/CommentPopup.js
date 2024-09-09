@@ -7,7 +7,7 @@ export default function CommentPopup({ id, item, data, setData }) {
   const [show, setShow] = useState(false);
   const [cmt, setCmt] = useState("");
   const makeComment = (text, postId) => {
-    fetch("/comment", {
+    fetch(`${window.location.origin}/comment`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

@@ -15,7 +15,7 @@ export default function Userprofile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch(`/user/${userid}`, {
+        const res = await fetch(`${window.location.origin}/user/${userid}`, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("jwt"),
           },
@@ -31,7 +31,7 @@ export default function Userprofile() {
   }, [userid]);
 
   const followUser = () => {
-    fetch(`/follow`, {
+    fetch(`${window.location.origin}/follow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function Userprofile() {
   };
 
   const unfollowUser = () => {
-    fetch(`/unfollow`, {
+    fetch(`${window.location.origin}/unfollow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

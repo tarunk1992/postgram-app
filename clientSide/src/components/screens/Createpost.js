@@ -11,7 +11,7 @@ export default function Createpost() {
 
   useEffect(() => {
     if (url) {
-      fetch("/createpost", {
+      fetch(`${window.location.origin}/createpost`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

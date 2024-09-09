@@ -17,7 +17,7 @@ export default function Login() {
       console.log("invalid");
       return;
     }
-    fetch(`/signin`, {
+    fetch(`${window.location.origin}/signin`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

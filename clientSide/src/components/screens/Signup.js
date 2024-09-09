@@ -42,7 +42,7 @@ export default function Signup() {
       console.log("invalid");
       return;
     }
-    fetch(`/signup`, {
+    fetch(`${window.location.origin}/signup`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
