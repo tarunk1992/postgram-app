@@ -22,7 +22,7 @@ export default function Uploadpic() {
       })
         .then((res) => res.json())
         .then((data) => {
-          fetch(`${window.location.origin}/updatepic`, {
+          fetch(`/updatepic`, {
             method: "put",
             headers: {
               "Content-Type": "application/json",

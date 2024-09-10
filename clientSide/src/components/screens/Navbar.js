@@ -25,7 +25,7 @@ export default function NavBar() {
   };
   const fetchUser = (query) => {
     setSearch(query);
-    fetch(`${window.location.origin}/search-users`, {
+    fetch(`/search-users`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

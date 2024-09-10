@@ -12,7 +12,7 @@ export default function Profile() {
   console.log("pro", user);
 
   useEffect(() => {
-    fetch(`${window.location.origin}/mypost`, {
+    fetch(`/mypost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -24,7 +24,7 @@ export default function Profile() {
   }, [mypic]);
 
   const deletePost = (postId) => {
-    fetch(`${window.location.origin}/deletepost/${postId}`, {
+    fetch(`/deletepost/${postId}`, {
       method: "delete",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),

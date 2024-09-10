@@ -7,7 +7,7 @@ export default function CommentPopup({ id, item, data, setData }) {
   const [show, setShow] = useState(false);
   const [cmt, setCmt] = useState("");
   const makeComment = (text, postId) => {
-    fetch(`${window.location.origin}/comment`, {
+    fetch("/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -56,9 +56,9 @@ export default function CommentPopup({ id, item, data, setData }) {
         <Modal.Body id="example-custom-modal-styling-title">
           {item.comments.map((record) => {
             return (
-              <div className="comments">
-                <p key={record._id}> {record.text} </p>
-                <span key={record._id}>~{record.postedBy.name}</span>
+              <div  key={record._id} className="comments">
+                <p> {record.text} </p>
+                <span>~{record.postedBy.name}</span>
               </div>
             );
           })}

@@ -15,7 +15,7 @@ export default function Home() {
   //  X9NB5L4EAR3939G1S5T4CNY2
 
   useEffect(() => {
-    fetch(`${window.location.origin}/allpost`, {
+    fetch("/allpost", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   const likePost = (id) => {
-    fetch(`${window.location.origin}/like`, {
+    fetch(`/like`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   const unlikePost = (id) => {
-    fetch(`${window.location.origin}/unlike`, {
+    fetch(`/unlike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

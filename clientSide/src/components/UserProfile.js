@@ -15,7 +15,7 @@ export default function Userprofile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch(`${window.location.origin}/user/${userid}`, {
+        const res = await fetch(`/user/${userid}`, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("jwt"),
           },
@@ -31,7 +31,7 @@ export default function Userprofile() {
   }, [userid]);
 
   const followUser = () => {
-    fetch(`${window.location.origin}/follow`, {
+    fetch(`/follow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function Userprofile() {
   };
 
   const unfollowUser = () => {
-    fetch(`${window.location.origin}/unfollow`, {
+    fetch(`/unfollow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -99,6 +99,8 @@ export default function Userprofile() {
         console.error("Error unfollowing user:", error);
       });
   };
+
+ 
 
   return (
     <>
@@ -140,11 +142,13 @@ export default function Userprofile() {
             </div>
           </div>
           <div className="gallery-section">
-            <div className="pics">
+            
               {profile.posts.map((image) => (
-                <img key={image._id} src={image.photo} alt={image.title} />
+                <div key={image._id} className="pics">
+                <img  src={image.photo} alt={image.title} />
+                </div>
               ))}
-            </div>
+          
           </div>
         </div>
       ) : (

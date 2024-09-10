@@ -14,7 +14,7 @@ export default function SubscriberUser() {
   const { state, dispatch } = useContext(userContext);
 
   useEffect(() => {
-    fetch(`${window.location.origin}/getfollowpost`, {
+    fetch(`/getfollowpost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -26,7 +26,7 @@ export default function SubscriberUser() {
   }, [data]);
 
   const likePost = (id) => {
-    fetch(`${window.location.origin}/like`, {
+    fetch(`/like`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export default function SubscriberUser() {
   };
 
   const unlikePost = (id) => {
-    fetch(`${window.location.origin}/unlike`, {
+    fetch(`/unlike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
