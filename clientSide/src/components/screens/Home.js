@@ -15,7 +15,7 @@ export default function Home() {
   //  X9NB5L4EAR3939G1S5T4CNY2
 
   useEffect(() => {
-    fetch("/allpost", {
+    fetch("https://post-backend-sl1s.onrender.com/allpost", {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   const likePost = (id) => {
-    fetch(`/like`, {
+    fetch(`https://post-backend-sl1s.onrender.com/like`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ export default function Home() {
   };
 
   const unlikePost = (id) => {
-    fetch(`/unlike`, {
+    fetch(`https://post-backend-sl1s.onrender.com/unlike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

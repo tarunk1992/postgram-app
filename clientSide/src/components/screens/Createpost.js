@@ -11,7 +11,7 @@ export default function Createpost() {
 
   useEffect(() => {
     if (url) {
-      fetch("/createpost", {
+      fetch("https://post-backend-sl1s.onrender.com/createpost", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

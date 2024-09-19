@@ -14,7 +14,7 @@ export default function SubscriberUser() {
   const { state, dispatch } = useContext(userContext);
 
   useEffect(() => {
-    fetch(`/getfollowpost`, {
+    fetch(`https://post-backend-sl1s.onrender.com/getfollowpost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -26,7 +26,7 @@ export default function SubscriberUser() {
   }, [data]);
 
   const likePost = (id) => {
-    fetch(`/like`, {
+    fetch(`https://post-backend-sl1s.onrender.com/like`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export default function SubscriberUser() {
   };
 
   const unlikePost = (id) => {
-    fetch(`/unlike`, {
+    fetch(`https://post-backend-sl1s.onrender.com/unlike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

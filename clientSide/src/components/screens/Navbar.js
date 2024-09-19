@@ -25,7 +25,7 @@ export default function NavBar() {
   };
   const fetchUser = (query) => {
     setSearch(query);
-    fetch(`/search-users`, {
+    fetch(`https://post-backend-sl1s.onrender.com/search-users`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export default function NavBar() {
                 type="text"
                 placeholder="search user"
                 value={search}
-                onChange={(e) => fetchUser(e.target.value)}
+                onChange={(e) => fetchUser(e.target.value.toLocaleLowerCase())}
               ></input>
 
               <ul>

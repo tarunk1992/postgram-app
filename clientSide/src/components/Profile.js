@@ -12,7 +12,7 @@ export default function Profile() {
   console.log("pro", user);
 
   useEffect(() => {
-    fetch(`${window.location.origin}/mypost`, {
+    fetch(`https://post-backend-sl1s.onrender.com/mypost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -24,7 +24,7 @@ export default function Profile() {
   }, [mypic]);
 
   const deletePost = (postId) => {
-    fetch(`${window.location.origin}/deletepost/${postId}`, {
+    fetch(`https://post-backend-sl1s.onrender.com/deletepost/${postId}`, {
       method: "delete",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),

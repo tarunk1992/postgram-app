@@ -22,7 +22,7 @@ export default function Uploadpic() {
       })
         .then((res) => res.json())
         .then((data) => {
-          fetch(`/updatepic`, {
+          fetch(`https://post-backend-sl1s.onrender.com/updatepic`, {
             method: "put",
             headers: {
               "Content-Type": "application/json",

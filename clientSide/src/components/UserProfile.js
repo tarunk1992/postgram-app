@@ -15,7 +15,7 @@ export default function Userprofile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch(`/user/${userid}`, {
+        const res = await fetch(`https://post-backend-sl1s.onrender.com/user/${userid}`, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("jwt"),
           },
@@ -31,7 +31,7 @@ export default function Userprofile() {
   }, [userid]);
 
   const followUser = () => {
-    fetch(`/follow`, {
+    fetch(`https://post-backend-sl1s.onrender.com/follow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function Userprofile() {
   };
 
   const unfollowUser = () => {
-    fetch(`/unfollow`, {
+    fetch(`https://post-backend-sl1s.onrender.com/unfollow`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ export default function Userprofile() {
               </div>
             </div>
           </div>
-          <div className="gallery-section">
+          <div className="gallery-section-u">
             
               {profile.posts.map((image) => (
                 <div key={image._id} className="pics">

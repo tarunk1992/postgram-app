@@ -42,7 +42,7 @@ export default function Signup() {
       console.log("invalid");
       return;
     }
-    fetch(`/signup`, {
+    fetch(`https://post-backend-sl1s.onrender.com/signup`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

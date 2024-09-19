@@ -368,7 +368,7 @@ h1,h2,h3,h4,h5,h6{
    
     align-items: center;
     flex-direction: column;
-    padding-top:120px ;
+    padding-top:100px ;
     padding-bottom: 50px ;
     
  
@@ -381,7 +381,7 @@ h1,h2,h3,h4,h5,h6{
         h4{
             text-align: center;
             font-family: "Lobster", sans-serif;
-            padding-bottom: 6px;
+            padding: 8px 0;
             border-bottom: 1px solid ;
             width: 100%;
             font-size: 20px;
@@ -393,6 +393,7 @@ h1,h2,h3,h4,h5,h6{
             padding:10px 50px 30px 50px;
             label{
                 font-size: 14px;
+                font-weight: 400;
                 .chechBox{
                   margin-left: 10px;
               }
@@ -400,7 +401,7 @@ h1,h2,h3,h4,h5,h6{
              
               .input{
                outline: none;
-               margin-bottom: 10px;
+               margin-bottom: 15px;
                border: none;
                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
                background-color: ghostwhite;
@@ -417,7 +418,7 @@ h1,h2,h3,h4,h5,h6{
               }
               button{
                   border: none;
-                  background-color: blue;
+                  background-color: rgb(0, 140, 255);
                   color: white;
                   width: 100%;
                   border-radius: 5px;
@@ -448,11 +449,11 @@ h1,h2,h3,h4,h5,h6{
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
         padding: 5px ;
         border-radius: 10px;
-        background-color: peachpuff;
+        background-color: rgb(255, 218, 185);
 
         h4{
             text-align: center;
-             padding-bottom: 6px;
+             padding: 8px 0;
             border-bottom: 1px solid ;
             width: 100%;
             font-size: 20px;
@@ -461,9 +462,11 @@ h1,h2,h3,h4,h5,h6{
            
            }
            .input_filed{
-            padding:10px 50px 30px 50px;
+            padding:15px 50px 30px 50px;
             label{
                 font-size: 14px;
+                font-weight: 400;
+                padding-bottom: 3px;
                 .chechBox{
                   margin-left: 10px;
               }
@@ -471,7 +474,7 @@ h1,h2,h3,h4,h5,h6{
              
               input{
                outline: none;
-               margin-bottom: 10px;
+               margin-bottom: 15px;
                border: none;
                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
                background-color: ghostwhite;
@@ -479,6 +482,16 @@ h1,h2,h3,h4,h5,h6{
                padding: 3px 3px 3px 8px;
                border-radius: 5px;
                cursor: pointer;
+               width: 300px;
+               position: relative;
+              
+              }
+              .visible{
+                position: absolute;
+                right: 0%;
+              }
+              .chechBox{
+                width: 15px;
               }
               h5{
                   font-size: 14px;
@@ -487,7 +500,7 @@ h1,h2,h3,h4,h5,h6{
               
               button{
                   border: none;
-                  background-color: blue;
+                  background-color: rgb(0, 140, 255);
                   color: white;
                   width: 100%;
                   border-radius: 5px;
@@ -515,7 +528,8 @@ h1,h2,h3,h4,h5,h6{
         display:flex ;
         align-items:center;
         justify-content: space-around;   
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid gray;
+        padding-bottom:40px ;
         .follow-details{
             display: flex;
             flex-direction: column;
@@ -617,6 +631,33 @@ h1,h2,h3,h4,h5,h6{
         }
     }
        }
+
+       .gallery-section-u{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+         gap: 30px;
+          padding-top: 30px;
+
+       .pics{
+       
+        max-width: 200px;
+        height: max-content;
+        border-radius: 10px;
+        overflow: hidden;
+        background-size: contain;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
+      
+          
+            img{
+                
+                width: 200px;
+                height: 250px;
+               
+        }
+    }
+       }
      
 }
 
@@ -644,7 +685,7 @@ h1,h2,h3,h4,h5,h6{
         h5{
             padding-left: 10px;
             color: black;
-            padding-bottom: 5px;
+            padding: 7px  0 8px 10px;
             font-size: 18px;
             
         }
@@ -661,7 +702,7 @@ h1,h2,h3,h4,h5,h6{
             }
         }
         .card-contain{
-            padding: 0 7px;
+            padding: 5px 7px 0 7px;
 
             .likes-comments{
                   display: flex;
@@ -834,7 +875,7 @@ a {
         display:flex ;
         align-items:center;
         justify-content: space-around;   
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid gray;
         .follow-details{
             display: flex;
             flex-direction: column;
@@ -853,6 +894,7 @@ a {
                 }
             }
         }
+       
         .profile-section{
             display:flex ;
             align-items: center;
@@ -889,6 +931,7 @@ a {
                 justify-content: center;
                 flex-direction: column;
                 h3{
+                    font-size: 18px;
                  font-weight: 700;
                 }
                 p{
@@ -897,6 +940,32 @@ a {
             }
         }
     }
+    .gallery-section-u{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+         gap: 30px;
+          padding-top: 30px;
+
+       .pics{
+       
+        max-width: 150px;
+        height: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-size: contain;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;       
+      
+          
+            img{
+                
+                width: 150px;
+                height: 200px;
+               
+        }
+    }
+       }
     .gallery-section{
         display: flex;
         flex-wrap: wrap;
@@ -908,17 +977,18 @@ a {
 
        .pics{
        
-        max-width: 200px;
-        height: max-content;
+        max-width: 150px;
+        height: 200px;
         border-radius: 10px;
         overflow: hidden;
         background-size: contain;
+       
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;   
         
         img{
-                
             width: 100%;
             height: 177px;
+            object-fit: cover;
            
     }    
         .delet-btn{
@@ -939,22 +1009,85 @@ a {
        }
      
 }
-
+.navBar{
+   
+  height: 60px;}
 
 }
 
 @media only screen and (max-width: 575px) {
     .signin{
         padding-top:150px ;
+
+        .form{
+          
+    
+           
+               .input_filed{
+                padding:15px 50px 30px 50px;
+                label{
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding-bottom: 3px;
+                    .chechBox{
+                      margin-left: 10px;
+                  }
+                  }
+                 
+                  input{
+                   
+                   margin-bottom: 25px;
+                  
+                   width: 250px;
+                   
+                  
+                  }
+                  .input{
+                    height:40px;
+                  
+               
+                  }
+                
+                
+                  
+                 
+               }
+            
+        }
+
     }
 
     .signUp{
         padding-top:150px ;
-        .form{
+       
      
-       width: 300px;
+       
           
-                  }
+       .form{
+        width: 350px;
+       
+           .input_filed{
+            padding:10px 50px 30px 50px;
+            label{
+                font-size: 16px;
+                font-weight: 400;
+                .chechBox{
+                  margin-left: 10px;
+              }
+              }
+             
+              .input{
+                height:40px;
+               margin-bottom: 25px;
+           
+              }
+              
+            
+            
+           }
+        
+    }
+                  
             
         
     }
@@ -1008,13 +1141,12 @@ a {
     .home{
     
         margin: 0 auto;
-        padding-top:85px ;
+        padding-top:100px ;
         gap: 25px;
       
          .card{
             img{
-                width: 100%;
-                height: 100%;
+              
                 object-fit: cover;
              }
          
@@ -1028,8 +1160,8 @@ a {
       
         .image-card{
             img{
-              width: 250px;
-              height:  280px;
+              width: 350px;
+              height:  400px;
               background-size: cover;
               
             }
@@ -1039,9 +1171,11 @@ a {
             .like{
               color: red;
               cursor: pointer;
+              font-size: 18px;
             }
           .cmt-btn{
             margin-left: 10px;
+            font-weight: 500;
           }
          
             h6{
@@ -1065,8 +1199,8 @@ a {
     }
   
     .navBar{
-        padding: 0 0 0 10px  ;
-      height: 48px;
+        padding: 0 0 0 15px  ;
+      height: 60px;
   
 .nav-links{
     .befor-regi{
@@ -1106,12 +1240,14 @@ a {
         .nav-Input{
            position: absolute;
            right: 10px;
-           top: 55px;
+           top: 65px;
             
             .search-box{
                position: relative;
                
-               
+               input{
+                height: 30px;
+               }
       
            
            
@@ -1294,10 +1430,11 @@ a {
                 flex-direction: column;
                 h3{
                  font-weight: 500;
-                 font-size: 18px;
+                 font-size: 20px;
                 }
                 p{
-               font-size: 14px;
+               font-size: 16px;
+              
                 }
             }
         }
@@ -1307,9 +1444,9 @@ a {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        
+       gap: 20px;
        
-       gap: 30px;
-       padding-top: 30px;
 
        .pics{
          img{
@@ -1346,6 +1483,13 @@ a {
         }
        }
      
+}
+
+.commentPopup{
+    .Comment{
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
 }
 @media only screen and (max-width: 479px) {

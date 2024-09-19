@@ -7,7 +7,8 @@ export default function CommentPopup({ id, item, data, setData }) {
   const [show, setShow] = useState(false);
   const [cmt, setCmt] = useState("");
   const makeComment = (text, postId) => {
-    fetch("/comment", {
+  if(text){
+    fetch("https://post-backend-sl1s.onrender.com/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -31,11 +32,12 @@ export default function CommentPopup({ id, item, data, setData }) {
         });
 
         setData(newData);
-        setCmt("");
+       setCmt('')
       })
       .catch((err) => {
         console.error("Error unliking post:", err);
       });
+  }
   };
 
   const commentToggle = () => {
@@ -43,7 +45,7 @@ export default function CommentPopup({ id, item, data, setData }) {
   };
   return (
     <div className="commentPopup">
-      <FaRegComment onClick={() => setShow(true)} />
+      <FaRegComment  className="Comment" onClick={() => setShow(true)} />
       <span className="span">{item.comments.length} comments </span>
 
       <Modal

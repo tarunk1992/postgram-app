@@ -2,9 +2,14 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "../../App";
 import { toast } from "react-toastify";
+
+
+
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  
   const history = useNavigate();
   const { state, dispatch } = useContext(userContext);
 
@@ -17,7 +22,7 @@ export default function Login() {
       console.log("invalid");
       return;
     }
-    fetch(`/signin`, {
+    fetch(`https://post-backend-sl1s.onrender.com/signin`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -76,6 +81,7 @@ export default function Login() {
             type="email"
             placeholder="Enter Email"
             required
+            className="input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></input>
@@ -86,6 +92,7 @@ export default function Login() {
             type="password"
             placeholder="Enter Password"
             required
+            className="input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></input>
